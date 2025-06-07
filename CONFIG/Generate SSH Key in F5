@@ -1,0 +1,24 @@
+#Generate SSH Key F5
+
+#Generate key
+
+ssh-keygen -t rsa -b 4096
+
+#Save it here
+/root/.ssh/
+
+#Look for the ff:
+/root/.ssh/id_rsa and /root/.ssh/id_rsa.pub
+
+#Put the SSH Key on the AWS Jumphost
+
+Login to 192.168.24.5
+
+vi ~/.ssh/known_hosts
+
+Add the ssh-key line on the last part of known_hosts script
+
+#Before testing this, make sure you have SSH access from F5 to Jumphost
+
+10.216.60.139 --> 192.168.24.5
+10.130.60.133 --> 192.168.24.5
